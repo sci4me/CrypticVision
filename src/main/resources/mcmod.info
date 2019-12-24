@@ -7,6 +7,7 @@
     "mcversion": "${mcversion}",
     "authorList": ["sci4me"],
     "credits": "Thanks to REZZ for the inspiration (and amazing music!) and kkaylium for help with animations!",
-    "updateJSON": "https://raw.githubusercontent.com/sci4me/CrypticVision/master/update.json"
+    "updateJSON": "https://raw.githubusercontent.com/sci4me/CrypticVision/master/update.json",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cryptic-vision"
   }
 ]
