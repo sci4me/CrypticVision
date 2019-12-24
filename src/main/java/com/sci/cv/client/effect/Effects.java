@@ -23,6 +23,7 @@ public final class Effects {
             loadAnimPak("gusher", "Gusher", 100);
             loadAnimPak("wave", "Wave", 100);
             loadAnimPak("swirl", "Swirl", 80);
+            loadAnimPak("helix", "Helix", 200);
         } catch(final Throwable t) {
             t.printStackTrace();
         }
