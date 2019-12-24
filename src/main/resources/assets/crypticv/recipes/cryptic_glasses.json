@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ldl",
+    "gdg",
+    "r r"
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:dye",
+      "data": 4
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "crypticv:cryptic_glasses",
+    "count": 1
+  }
+}

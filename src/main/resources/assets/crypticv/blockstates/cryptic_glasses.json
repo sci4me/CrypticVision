@@ -1,0 +1,47 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "crypticv:cryptic_glasses.obj",
+    "transform": {
+      "thirdperson_righthand": {
+        "rotation": [ 70, 0, 0 ],
+        "translation": [ -0.1, 0.1, 0.1 ],
+        "scale": [ 0.14, 0.14, 0.14 ]
+      },
+      "thirdperson_lefthand": {
+        "rotation": [ 70, 180, 0 ],
+        "translation": [ -0.1, 0.2, 0 ],
+        "scale": [ 0.14, 0.14, 0.14 ]
+      },
+      "firstperson_righthand": {
+        "rotation": [ 10, 0, 0 ],
+        "translation": [ 0, 0.1, 0 ],
+        "scale": [ 0.14, 0.14, 0.14 ]
+      },
+      "firstperson_lefthand": {
+        "rotation": [ 10, 180, 0 ],
+        "translation": [ 0, 0.15, -0.1 ],
+        "scale": [ 0.14, 0.14, 0.14 ]
+      },
+      "gui": {
+        "rotation": [ 350, 300, 16 ],
+        "translation": [ -0.15, 0.05, 0 ],
+        "scale": [ 0.16, 0.16, 0.16 ]
+      },
+      "ground": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ -0.1, 0.1, 0.1 ],
+        "scale": [ 0.14, 0.14, 0.14 ]
+      },
+      "fixed": {
+        "rotation": [ 0, -90, 0],
+        "translation": [ -0.1, 0.1, 0 ],
+        "scale": [ 0.2, 0.2, 0.2 ]
+      }
+    }
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}
