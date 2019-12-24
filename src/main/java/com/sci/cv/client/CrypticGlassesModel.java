@@ -3,6 +3,7 @@ package com.sci.cv.client;
 import com.sci.cv.CrypticVision;
 import com.sci.cv.client.effect.Effect;
 import com.sci.cv.client.effect.Effects;
+import com.sci.cv.util.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.BufferBuilder;
@@ -34,7 +35,7 @@ public final class CrypticGlassesModel extends ModelBiped {
     private CrypticGlassesModel() {
         try {
             final ModelManager mm = Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager();
-            this.model = mm.getModel(new ModelResourceLocation("crypticv:cryptic_glasses"));
+            this.model = mm.getModel(new ModelResourceLocation(String.format("%s:cryptic_glasses", Constants.MOD_ID)));
         } catch(final Exception e) {
             e.printStackTrace();
         }

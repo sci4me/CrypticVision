@@ -3,6 +3,7 @@ package com.sci.cv;
 import com.sci.cv.item.ItemCrypticGlasses;
 import com.sci.cv.net.GamePacketHandler;
 import com.sci.cv.proxy.CommonProxy;
+import com.sci.cv.util.Constants;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -13,11 +14,11 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@Mod(modid = "crypticv", name = "CrypticVision", version = "0.1.0")
+@Mod(modid = Constants.MOD_ID, useMetadata = true)
 public final class CrypticVision {
     private static final CrypticVision INSTANCE = new CrypticVision();
 
-    @SidedProxy(clientSide="com.sci.cv.proxy.ClientProxy", serverSide="com.sci.cv.proxy.ServerProxy")
+    @SidedProxy(clientSide = Constants.CLIENT_PROXY, serverSide = Constants.SERVER_PROXY)
     private static CommonProxy proxy;
 
     @Mod.InstanceFactory

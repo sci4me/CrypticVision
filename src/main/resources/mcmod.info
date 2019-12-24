@@ -1,0 +1,11 @@
+[
+  {
+    "modid": "crypticv",
+    "name" : "Cryptic Vision",
+    "description": "A decorative mod that adds REZZ-inspired light-up glasses.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "authorList": ["sci4me"],
+    "credits": "Thanks to REZZ for the inspiration (and amazing music!) and kkaylium for help with animations!"
+  }
+]

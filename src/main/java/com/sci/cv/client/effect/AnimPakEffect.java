@@ -1,5 +1,6 @@
 package com.sci.cv.client.effect;
 
+import com.sci.cv.util.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IResource;
 import net.minecraft.init.Items;
@@ -21,7 +22,7 @@ public final class AnimPakEffect extends Effect {
         this.msPerFrame = msPerFrame;
         this.displayName = displayName;
 
-        final IResource res = Minecraft.getMinecraft().getResourceManager().getResource(new ResourceLocation(String.format("crypticv:anims/%s.animpak", name)));
+        final IResource res = Minecraft.getMinecraft().getResourceManager().getResource(new ResourceLocation(String.format("%s:anims/%s.animpak", Constants.MOD_ID, name)));
 
         final DataInputStream din = new DataInputStream(new GZIPInputStream(res.getInputStream()));
 

@@ -4,6 +4,7 @@ import com.sci.cv.client.effect.Effect;
 import com.sci.cv.client.effect.Effects;
 import com.sci.cv.net.GamePacketHandler;
 import com.sci.cv.net.PacketSelectAnim;
+import com.sci.cv.util.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -20,7 +21,7 @@ import org.lwjgl.opengl.GL11;
 import java.io.IOException;
 
 public final class GuiGlasses extends GuiContainer {
-    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation("crypticv", "textures/gui/glasses.png");
+    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(Constants.MOD_ID, "textures/gui/glasses.png");
 
     private final EntityPlayer player;
 
