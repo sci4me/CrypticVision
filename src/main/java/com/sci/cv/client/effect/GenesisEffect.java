@@ -19,6 +19,6 @@ public final class GenesisEffect extends Effect {
         final int r = (int) (Math.sin(this.theta * f) * 127) + 128;
         final int g = (int) (Math.sin(this.theta * f + 2) * 127) + 128;
         final int b = (int) (Math.sin(this.theta * f + 4) * 127) + 128;
-        return (r << 16) | (g << 8) | b | 0xFF000000;
+        return 0xFF000000 | (r << 16) | (g << 8) | b;
     }
 }

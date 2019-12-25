@@ -149,10 +149,10 @@ public final class CrypticGlassesModel extends ModelBiped {
         final BufferBuilder buf = tess.getBuffer();
         buf.begin(GL11.GL_TRIANGLE_FAN, DefaultVertexFormats.POSITION_COLOR);
 
-        final int red = (color >> 24) & 0xFF;
-        final int green = (color >> 16) & 0xFF;
-        final int blue = (color >> 8) & 0xFF;
-        final int alpha = color & 0xFF;
+        final int alpha = (color >> 24) & 0xFF;
+        final int red = (color >> 16) & 0xFF;
+        final int green = (color >> 8) & 0xFF;
+        final int blue = color & 0xFF;
 
         buf.pos(x, y, 0);
         buf.color(red, green, blue, alpha);

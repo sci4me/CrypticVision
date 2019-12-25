@@ -3,7 +3,6 @@ package com.sci.cv.client.effect;
 import com.sci.cv.util.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IResource;
-import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 
 import java.io.DataInputStream;
@@ -43,13 +42,7 @@ public final class AnimPakEffect extends Effect {
             final int active = din.readInt();
             for(int j = 0; j < active; j++) {
                 final int index = din.readInt();
-                int value = din.readInt();
-
-                if(value != 0) {
-                    value = ((value & 0x00FFFFFF) << 8) | 0xFF;
-                }
-
-                this.frames[i][index] = value;
+                this.frames[i][index] = din.readInt();
             }
         }
     }
