@@ -1,0 +1,12 @@
+GZIP {
+    magic: 5xbyte               ; AMPK\ESC
+    version: byte               ; 1
+    frame_count: int
+    [
+        active_count: int
+        [
+            index: int
+            color_argb: int
+        ]
+    ]
+}

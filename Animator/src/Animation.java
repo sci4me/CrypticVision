@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
@@ -9,6 +10,13 @@ public final class Animation {
         final DataInputStream din = new DataInputStream(new GZIPInputStream(new FileInputStream(file)));
 
         final Animation result = new Animation(false);
+
+        final byte[] magic = new byte[5];
+        if(din.read(magic) != 5) throw new IllegalArgumentException("Invalid AnimPak file!");
+        if(!Arrays.equals(magic, new byte[]{ 'A', 'M', 'P', 'K', '\u001B' })) throw new IllegalArgumentException("Invalid AnikPak magic!");
+
+        final byte version = din.readByte();
+        if(version != 1) throw new IllegalArgumentException("Expected AnimPak version 1, got " + version);
 
         final int frameCount = din.readInt();
         for(int i = 0; i < frameCount; i++) {
@@ -74,6 +82,14 @@ public final class Animation {
 
     public void export(final File file) throws IOException {
         final DataOutputStream dout = new DataOutputStream(new GZIPOutputStream(new BufferedOutputStream(new FileOutputStream(file))));
+
+        dout.writeByte('A');
+        dout.writeByte('M');
+        dout.writeByte('P');
+        dout.writeByte('K');
+        dout.writeByte('\u001B');
+
+        dout.writeByte(1);
 
         dout.writeInt(this.frames.size());
         for(final Frame frame : this.frames) {

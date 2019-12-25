@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
 
 public final class AnimPakEffect extends Effect {
@@ -26,8 +27,14 @@ public final class AnimPakEffect extends Effect {
 
         final DataInputStream din = new DataInputStream(new GZIPInputStream(res.getInputStream()));
 
+        final byte[] magic = new byte[5];
+        if(din.read(magic) != 5) throw new IllegalArgumentException("Invalid AnimPak file!");
+        if(!Arrays.equals(magic, new byte[]{ 'A', 'M', 'P', 'K', '\u001B' })) throw new IllegalArgumentException("Invalid AnikPak magic!");
+
+        final byte version = din.readByte();
+        if(version != 1) throw new IllegalArgumentException("Expected AnimPak version 1, got " + version);
+
         final int frameCount = din.readInt();
-        if(frameCount < 0) throw new IllegalArgumentException(); // TODO
 
         this.frames = new int[frameCount][];
         for(int i = 0; i < this.frames.length; i++) {
