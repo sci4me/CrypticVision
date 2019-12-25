@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@Mod(modid = Constants.MOD_ID, useMetadata = true)
+@Mod(modid = Constants.MOD_ID, updateJSON = "https://raw.githubusercontent.com/sci4me/CrypticVision/master/update.json", useMetadata = true)
 public final class CrypticVision {
     private static final CrypticVision INSTANCE = new CrypticVision();
 
