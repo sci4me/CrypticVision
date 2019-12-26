@@ -44,7 +44,6 @@ public class PacketSelectAnim implements IMessage {
             final ItemStack stack = player.getHeldItem(EnumHand.MAIN_HAND);
 
             NBTTagCompound tag = stack.getTagCompound();
-            System.out.println("TAG COMPOUND: " + tag);
             if(tag == null) {
                 tag = new NBTTagCompound();
             }
